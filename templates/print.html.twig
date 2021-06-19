@@ -1,0 +1,97 @@
+<title>{% block title %}Печать дипломов{% endblock %}</title>
+
+{% block stylesheets %}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>body {
+            font-family: "times", sans-serif;}</style>
+{% endblock %}
+
+<body>
+
+{% block body %}
+    {% set vMonth = ['','января','февраля','марта','апреля','мая','июня',
+        'июля','августа','сентября','октября','ноября','декабря'] %}
+
+    {% for student in students %}
+    <div class="page">
+        <div class="ex1" style="position: absolute;margin-top: 200px;margin-left: 100px;text-align: center;font-weight: bold;min-width: 300px;">
+            <b>
+                <i>
+                    Федеральное государственное бюджетное <br>
+                    образовательное учреждение высшего образования<br>
+                    «Челябинский государственный университет»<br>
+                    г.Челябинск
+                </i>
+            </b>
+        </div>
+        <div class="ex2" style="position: absolute;margin-top: 400px;margin-left: 250px;min-width: 300px;">
+        <b>
+                <i>
+                    {{ student.RegisterNumber }}
+                </i>
+            </b>
+        </div>
+        <div class="ex3" style="position: absolute;margin-top: 450px;margin-left: 230px;min-width: 300px;">
+                <b>
+                    <i>
+                        {{ student.DateGive|date('d') }} {{ vMonth[student.DateGive|date('n')]}} {{ student.DateGive|date('Y') }}
+                    </i>
+                </b>
+        </div>
+        <div class="ex4" style="position: absolute;margin-top: -150px;margin-left: 700px;min-width: 300px;">
+            <b>
+                <i>
+                    {{ student.FName }}
+                   {{ student.IName }} {{ student.OName }}
+                </i>
+            </b>
+        </div>
+        <div class="ex5" style="position: absolute;margin-top: -30px;margin-left: 700px;min-width: 300px;">
+            <b>
+                <i>
+                  {{ student.NameSpecialization }}
+                </i>
+            </b>
+        </div>
+        <div class="ex6" style="position: absolute;margin-top: 250px;margin-left: 750px;min-width: 300px;">
+            <b>
+                <i>
+                   {{ student.TypeDiplom }}
+                </i>
+            </b>
+        </div>
+        <div class="ex7" style="position: absolute;margin-top: 290px;margin-left: 700px;min-width: 300px;">
+            <b>
+                <i>
+                    {{ student.NumberProtocol }}  {{ student.DateProtocol|date('d') }} {{ vMonth[student.DateProtocol|date('n')]}} {{ student.DateProtocol|date('Y') }}
+                </i>
+            </b>
+        </div>
+        <div class="ex8" style="position: absolute;margin-top: 350px;margin-left: 900px;min-width: 300px;">
+            <b>
+                <i>
+                    {{ student.NameChairman }}
+                </i>
+            </b>
+        </div>
+        <div class="ex9" style="position: absolute;margin-top: 400px;margin-left: 600px;min-width: 300px;">
+            <b>
+                <i>
+                    /
+                </i>
+            </b>
+        </div>
+        <div class="ex10" style="position: absolute;margin-top: 400px;margin-left: 945px;min-width: 300px;">
+            <b>
+                <i>
+                    {{ student.NameDeputyRector }}
+                </i>
+            </b>
+        </div>
+    </div>
+    {% endfor %}
+{% endblock %}
+
+</body>

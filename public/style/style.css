@@ -1,0 +1,70 @@
+.ex1 {
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 100px;
+    text-align: center;
+    font-weight: bold;
+    min-width: 300px;
+}
+.ex2 {
+    position: absolute;
+    margin-top: 600px;
+    margin-left: 250px;
+    min-width: 300px;
+}
+.ex3 {
+    position: absolute;
+    margin-top: 694px;
+    margin-left: 250px;
+    min-width: 300px;
+}
+.ex4 {
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 800px;
+    min-width: 300px;
+}
+.ex5 {
+    position: absolute;
+    margin-top: 150px;
+    margin-left: 800px;
+    min-width: 300px;
+}
+.ex6 {
+    position: absolute;
+    margin-top: 200px;
+    margin-left: 800px;
+    min-width: 300px;
+}
+.ex7 {
+    position: absolute;
+    margin-top: 300px;
+    margin-left: 800px;
+    min-width: 300px;
+}
+.ex8 {
+    position: absolute;
+    margin-top: 620px;
+    margin-left: 940px;
+    min-width: 300px;
+}
+.ex9 {
+    position: absolute;
+    margin-top: 500px;
+    margin-left: 800px;
+    min-width: 300px;
+}
+.ex10 {
+    position: absolute;
+    margin-top: 680px;
+    margin-left: 973px;
+    min-width: 300px;
+}
+.page {
+    width: 29.7cm;
+    min-height: 21cm;
+    margin: 1cm auto;
+    border: 1px #d3d3d3 solid;
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
